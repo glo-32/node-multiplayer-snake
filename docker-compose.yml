@@ -1,7 +1,7 @@
 version: '3'
 services:
   snake:
-    image: 'amrit96/snake'
+    image: 'glo-32/snake'
     environment:
       - "PORT:3000"
     ports:
