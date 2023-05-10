@@ -9,7 +9,7 @@ pipeline {
 
     stage('Cloning Git') {
       steps {
-        git 'https://github.com/amritsql/node-multiplayer-snake.git'
+        git 'https://github.com/glo-32/node-multiplayer-snake.git'
       }
     }
 
@@ -21,7 +21,7 @@ pipeline {
     }
   stage('Build-and-Tag') {
       steps {
-         sh "docker build . -t amrit96/snake"
+         sh "docker build . -t glo-32/snake"
          echo 'build & tagging completed'
       }
     }
@@ -29,7 +29,7 @@ pipeline {
       steps {
         script{
         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-          sh "docker push amrit96/snake"}
+          sh "docker push glo-32/snake"}
         }
       }
     }
